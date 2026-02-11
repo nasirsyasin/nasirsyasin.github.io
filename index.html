@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Nasir Shahzad Yasin | Senior QA Automation Engineer</title>
+  <meta name="description" content="Senior QA Automation Engineer (5+ years). Playwright, Selenium, Appium, Python. Web & Mobile testing, CI/CD, AI-assisted automation. Based in Torino, Italy." />
+  <meta name="keywords" content="QA Automation Engineer, Playwright, Selenium, Appium, Python, Test Automation, CI/CD, QA Engineer, Torino" />
+  <meta name="author" content="Nasir Shahzad Yasin" />
+  <style>
+    :root{
+      --bg:#0b0f17;
+      --card:#0f1624;
+      --muted:#9aa7bd;
+      --text:#e8eefc;
+      --line:rgba(255,255,255,.10);
+      --accent:#7c5cff;
+      --accent2:#22c55e;
+      --shadow: 0 18px 50px rgba(0,0,0,.35);
+      --radius:18px;
+      --max:1080px;
+    }
+    *{box-sizing:border-box}
+    html,body{margin:0;padding:0;background:radial-gradient(1000px 500px at 20% 0%, rgba(124,92,255,.20), transparent 60%),
+                                   radial-gradient(900px 500px at 80% 10%, rgba(34,197,94,.16), transparent 55%),
+                                   var(--bg);
+              color:var(--text); font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji","Segoe UI Emoji";}
+    a{color:inherit;text-decoration:none}
+    .wrap{max-width:var(--max); margin:0 auto; padding:28px 20px 80px;}
+    .topbar{
+      display:flex; align-items:center; justify-content:space-between; gap:12px;
+      padding:14px 16px; border:1px solid var(--line); border-radius:999px;
+      background:rgba(15,22,36,.55); backdrop-filter: blur(10px);
+      position:sticky; top:14px; z-index:50;
+    }
+    .brand{display:flex; align-items:center; gap:10px; font-weight:700; letter-spacing:.3px}
+    .dot{width:10px;height:10px;border-radius:999px;background:linear-gradient(135deg,var(--accent),var(--accent2)); box-shadow:0 0 0 6px rgba(124,92,255,.15)}
+    .nav{display:flex; gap:14px; flex-wrap:wrap; justify-content:flex-end}
+    .nav a{opacity:.86; font-size:14px; padding:8px 10px; border-radius:999px; border:1px solid transparent}
+    .nav a:hover{opacity:1; border-color:var(--line); background:rgba(255,255,255,.03)}
+    .btn{
+      display:inline-flex; align-items:center; gap:10px;
+      padding:10px 14px; border-radius:999px; border:1px solid var(--line);
+      background:rgba(255,255,255,.03);
+      transition:.18s ease;
+      font-weight:600; font-size:14px;
+    }
+    .btn:hover{transform:translateY(-1px); border-color:rgba(124,92,255,.35); box-shadow: 0 12px 30px rgba(124,92,255,.15)}
+    .btn.primary{border-color:rgba(124,92,255,.35); background:linear-gradient(135deg, rgba(124,92,255,.22), rgba(34,197,94,.12))}
+    header.hero{padding:42px 0 18px; display:grid; grid-template-columns: 1.4fr .6fr; gap:18px; align-items:stretch}
+    @media (max-width: 880px){ header.hero{grid-template-columns:1fr} }
+    .card{
+      background:rgba(15,22,36,.65);
+      border:1px solid var(--line);
+      border-radius:var(--radius);
+      box-shadow:var(--shadow);
+      backdrop-filter: blur(10px);
+    }
+    .heroMain{padding:28px}
+    .kicker{display:inline-flex; align-items:center; gap:8px; padding:8px 12px; border-radius:999px;
+      border:1px solid rgba(124,92,255,.35); background:rgba(124,92,255,.10); color:#d8d0ff; font-size:13px; font-weight:600}
+    h1{margin:14px 0 10px; font-size:44px; line-height:1.05; letter-spacing:-.8px}
+    @media (max-width: 520px){ h1{font-size:36px} }
+    .subtitle{color:var(--muted); font-size:16px; line-height:1.6; max-width:62ch}
+    .heroCtas{margin-top:18px; display:flex; gap:12px; flex-wrap:wrap}
+    .heroSide{padding:20px; display:flex; flex-direction:column; gap:12px}
+    .pill{
+      padding:14px 14px;
+      border-radius:16px;
+      border:1px solid var(--line);
+      background:rgba(255,255,255,.03);
+    }
+    .pill strong{display:block; font-size:14px}
+    .pill span{display:block; color:var(--muted); font-size:13px; margin-top:6px; line-height:1.4}
+    .grid{display:grid; grid-template-columns:1fr 1fr; gap:16px}
+    @media (max-width: 880px){ .grid{grid-template-columns:1fr} }
+    section{margin-top:18px}
+    .sectionHead{display:flex; align-items:flex-end; justify-content:space-between; gap:12px; margin:26px 0 12px}
+    .sectionHead h2{margin:0; font-size:20px; letter-spacing:-.2px}
+    .sectionHead p{margin:0; color:var(--muted); font-size:14px}
+    .content{padding:22px}
+    .tags{display:flex; gap:10px; flex-wrap:wrap; margin-top:12px}
+    .tag{font-size:12.5px; color:#cfe1ff; border:1px solid rgba(255,255,255,.10); background:rgba(255,255,255,.03); padding:8px 10px; border-radius:999px}
+    .list{display:grid; gap:10px; margin-top:10px}
+    .li{padding:14px; border:1px solid var(--line); border-radius:16px; background:rgba(255,255,255,.03)}
+    .li .title{display:flex; align-items:center; justify-content:space-between; gap:10px}
+    .li .title b{font-size:14px}
+    .li .title small{color:var(--muted)}
+    .li p{margin:8px 0 0; color:var(--muted); font-size:13.5px; line-height:1.5}
+    .twoCol{display:grid; grid-template-columns:1.25fr .75fr; gap:16px}
+    @media (max-width: 880px){ .twoCol{grid-template-columns:1fr} }
+    .footer{
+      margin-top:26px; padding:18px; text-align:center; color:var(--muted);
+      border:1px solid var(--line); border-radius:var(--radius); background:rgba(15,22,36,.55)
+    }
+    .mono{font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace}
+    .accent{color:#d8d0ff}
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <div class="topbar">
+      <div class="brand">
+        <span class="dot" aria-hidden="true"></span>
+        <span>Nasir Shahzad Yasin</span>
+      </div>
+      <nav class="nav" aria-label="Primary">
+        <a href="#about">About</a>
+        <a href="#expertise">Expertise</a>
+        <a href="#projects">Case Studies</a>
+        <a href="#experience">Experience</a>
+        <a href="#education">Education</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
+
+    <header class="hero">
+      <div class="card heroMain">
+        <span class="kicker">Senior QA Automation Engineer • Web & Mobile • AI-assisted Automation</span>
+        <h1>Building reliable releases with smart QA and scalable automation.</h1>
+        <p class="subtitle">
+          I’m a QA & automation professional with <b>5+ years</b> of experience testing web and mobile apps.
+          I build and maintain automation frameworks using <b>Playwright, Selenium, Appium, and Python</b>,
+          integrated into <b>CI/CD</b>, with AI-assisted scripting to speed up coverage and improve stability.
+        </p>
+
+        <div class="heroCtas">
+          <!-- Replace # with your real links if you want -->
+          <a class="btn primary" href="#contact">Hire / Collaborate</a>
+          <a class="btn" href="https://linkedin.com/in/nasir-wattoo" target="_blank" rel="noreferrer">LinkedIn</a>
+          <a class="btn" href="https://github.com/nasirsyasin" target="_blank" rel="noreferrer">GitHub</a>
+          <a class="btn" href="mailto:nasirsyasin@gmail.com">Email</a>
+        </div>
+      </div>
+
+      <aside class="card heroSide">
+        <div class="pill">
+          <strong>Location</strong>
+          <span>Torino, Italy • Open to Remote/EU roles</span>
+        </div>
+        <div class="pill">
+          <strong>Focus</strong>
+          <span>Release quality • Regression speed • Cross-browser/device reliability</span>
+        </div>
+        <div class="pill">
+          <strong>Primary Stack</strong>
+          <span class="mono">Playwright • Python • Appium • CI/CD</span>
+        </div>
+        <div class="pill">
+          <strong>Contact</strong>
+          <span class="mono">+39 3314688181 • nasirsyasin@gmail.com</span>
+        </div>
+      </aside>
+    </header>
+
+    <section id="about">
+      <div class="sectionHead">
+        <h2>About</h2>
+        <p>Quality-first, automation-smart, team-oriented.</p>
+      </div>
+      <div class="card content">
+        <p class="subtitle" style="margin:0; max-width:85ch;">
+          I lead end-to-end QA for product releases: from planning and risk-based validation to building automation
+          that scales. I work closely with engineering and product teams to ensure features ship with confidence,
+          stable performance, and minimal production issues.
+        </p>
+        <div class="tags" aria-label="Highlights">
+          <span class="tag">End-to-End QA</span>
+          <span class="tag">Automation Frameworks</span>
+          <span class="tag">CI/CD Integration</span>
+          <span class="tag">Cross-browser & Mobile</span>
+          <span class="tag">AI-assisted automation</span>
+        </div>
+      </div>
+    </section>
+
+    <section id="expertise" class="twoCol">
+      <div>
+        <div class="sectionHead">
+          <h2>Core Expertise</h2>
+          <p>What I do best.</p>
+        </div>
+        <div class="card content">
+          <div class="list">
+            <div class="li">
+              <div class="title"><b>QA Strategy & Release Readiness</b><small>Risk-based, practical</small></div>
+              <p>Define test scope, execute functional/regression/smoke suites, validate stability, and support go/no-go decisions.</p>
+            </div>
+            <div class="li">
+              <div class="title"><b>Automation Framework Architecture</b><small>Maintainable & scalable</small></div>
+              <p>Design automation using Playwright/Selenium/Appium with Python/JS, optimized for reliability and CI execution.</p>
+            </div>
+            <div class="li">
+              <div class="title"><b>CI/CD Integration</b><small>Fast feedback loops</small></div>
+              <p>Integrate tests into Jenkins/GitHub Actions, improving signal quality and reducing regression cycle time.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div>
+        <div class="sectionHead">
+          <h2>Tech Stack</h2>
+          <p>Tools I use daily.</p>
+        </div>
+        <div class="card content">
+          <div class="list">
+            <div class="li">
+              <div class="title"><b>Languages</b><small class="mono">Python • Java • JavaScript</small></div>
+            </div>
+            <div class="li">
+              <div class="title"><b>Automation</b><small class="mono">Playwright • Selenium • Appium • Pytest • Behave • Katalon</small></div>
+            </div>
+            <div class="li">
+              <div class="title"><b>CI/CD</b><small class="mono">Jenkins • GitHub Actions</small></div>
+            </div>
+            <div class="li">
+              <div class="title"><b>API/Perf</b><small class="mono">Postman • JMeter</small></div>
+            </div>
+            <div class="li">
+              <div class="title"><b>QA Tools</b><small class="mono">Jira • Zephyr • TestRail • ClickUp • Linear • Notion</small></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="projects">
+      <div class="sectionHead">
+        <h2>Case Studies</h2>
+        <p>Real work, portfolio-style.</p>
+      </div>
+
+      <div class="grid">
+        <article class="card content">
+          <h3 style="margin:0 0 6px;">Touchtight (Web) — AI-assisted automation + release QA</h3>
+          <p class="subtitle" style="margin:0;">
+            Led end-to-end QA for an animated soccer coaching platform. Covered functional, regression, and cross-browser testing,
+            and defined automation strategy with AI-assisted scripting integrated into CI/CD.
+          </p>
+          <div class="list">
+            <div class="li"><b>Problem</b><p>Regression cycles and cross-browser stability required consistent, fast validation.</p></div>
+            <div class="li"><b>Solution</b><p>Built/expanded automation strategy with Playwright + CI/CD, improving coverage and reliability.</p></div>
+            <div class="li"><b>Outcome</b><p>Faster release confidence and improved product stability through repeatable quality gates.</p></div>
+          </div>
+        </article>
+
+        <article class="card content">
+          <h3 style="margin:0 0 6px;">Dashboard Earth (Mobile) — BDD automation with Python + Appium</h3>
+          <p class="subtitle" style="margin:0;">
+            Climate-focused mobile product. Collaborated with the team to execute test plans and implement automated tests using
+            Python (Behave, Pytest) and Appium.
+          </p>
+          <div class="list">
+            <div class="li"><b>Problem</b><p>Growing feature set needed scalable regression coverage.</p></div>
+            <div class="li"><b>Solution</b><p>Implemented BDD-style automation structure and reusable test utilities for mobile flows.</p></div>
+            <div class="li"><b>Outcome</b><p>More stable mobile regression execution and improved defect detection earlier in sprints.</p></div>
+          </div>
+        </article>
+
+        <article class="card content">
+          <h3 style="margin:0 0 6px;">Lago (Mobile & Frame) — Structured QA + Katalon support</h3>
+          <p class="subtitle" style="margin:0;">
+            NFT-based product. Worked with cross-functional teams to execute test plans and support test automation using Katalon Studio.
+          </p>
+          <div class="list">
+            <div class="li"><b>Focus</b><p>Test planning, execution, and quality validation across features and releases.</p></div>
+            <div class="li"><b>Automation</b><p>Supported automation efforts with Katalon to reduce repetitive manual checks.</p></div>
+          </div>
+        </article>
+
+        <article class="card content">
+          <h3 style="margin:0 0 6px;">Mesmer (Web) — Manual QA excellence</h3>
+          <p class="subtitle" style="margin:0;">
+            Executed defined test plans with sanity, functional, regression, and smoke testing to ensure release readiness.
+          </p>
+          <div class="list">
+            <div class="li"><b>Strength</b><p>Clear defect reporting, risk-based validation, and strong collaboration with the team.</p></div>
+            <div class="li"><b>Outcome</b><p>Improved release confidence and reduced production issues through consistent QA cycles.</p></div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section id="experience">
+      <div class="sectionHead">
+        <h2>Experience</h2>
+        <p>Timeline.</p>
+      </div>
+
+      <div class="card content">
+        <div class="list">
+          <div class="li">
+            <div class="title">
+              <b>Senior Software QA Automation Engineer — Mavric Technology (USA)</b>
+              <small>Nov 2024 – Feb 2026</small>
+            </div>
+            <p>Touchtight Web App: end-to-end QA, automation strategy, cross-browser testing, CI/CD integration, AI-assisted scripting.</p>
+          </div>
+
+          <div class="li">
+            <div class="title">
+              <b>Senior Software QA Automation Engineer — Devigital Systems</b>
+              <small>Feb 2022 – Oct 2024</small>
+            </div>
+            <p>Dashboard Earth (Mobile): test plans + Python (Behave/Pytest) + Appium automation. Lago: test plans + Katalon support.</p>
+          </div>
+
+          <div class="li">
+            <div class="title">
+              <b>Software QA Engineer — Meta App</b>
+              <small>May 2019 – Dec 2021</small>
+            </div>
+            <p>Mesmer Web App: sanity, functional, regression, smoke testing; release readiness; defect reporting.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="education" class="twoCol">
+      <div>
+        <div class="sectionHead">
+          <h2>Education</h2>
+          <p>MSCS + published thesis.</p>
+        </div>
+        <div class="card content">
+          <div class="li" style="margin:0;">
+            <div class="title">
+              <b>MS in Computer Science (MSCS) — Riphah International University</b>
+              <small>2020 – 2023</small>
+            </div>
+            <p><span class="accent">Machine Learning:</span> Applied Autoencoder and CNN models for medical image classification.</p>
+            <p style="margin-top:8px;">
+              Publication: <a class="btn" style="padding:8px 10px;" href="https://ieeexplore.ieee.org/document/9996048" target="_blank" rel="noreferrer">IEEE Paper</a>
+              <a class="btn" style="padding:8px 10px;" href="https://riphah.edu.pk/" target="_blank" rel="noreferrer">University</a>
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div>
+        <div class="sectionHead">
+          <h2>Certifications</h2>
+          <p>Quick proof of skills.</p>
+        </div>
+        <div class="card content">
+          <div class="list">
+            <div class="li">
+              <div class="title"><b>API Testing with Postman</b><small>Coursera</small></div>
+            </div>
+            <div class="li">
+              <div class="title"><b>Selenium Automation with Java</b><small>Coursera</small></div>
+            </div>
+            <div class="li">
+              <div class="title"><b>Developing Cloud Apps with Node.js & React</b><small>IBM (Coursera)</small></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact">
+      <div class="sectionHead">
+        <h2>Contact</h2>
+        <p>Let’s talk.</p>
+      </div>
+      <div class="card content">
+        <div class="grid">
+          <div class="li">
+            <div class="title"><b>Email</b><small class="mono">fastest</small></div>
+            <p><a class="btn primary" href="mailto:nasirsyasin@gmail.com">nasirsyasin@gmail.com</a></p>
+          </div>
+          <div class="li">
+            <div class="title"><b>Phone / WhatsApp</b><small class="mono">Italy</small></div>
+            <p class="mono">+39 3314688181</p>
+          </div>
+          <div class="li">
+            <div class="title"><b>LinkedIn</b><small>Profile</small></div>
+            <p><a class="btn" href="https://linkedin.com/in/nasir-wattoo" target="_blank" rel="noreferrer">linkedin.com/in/nasir-wattoo</a></p>
+          </div>
+          <div class="li">
+            <div class="title"><b>GitHub</b><small>Work</small></div>
+            <p><a class="btn" href="https://github.com/nasirsyasin" target="_blank" rel="noreferrer">github.com/nasirsyasin</a></p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="footer">
+      <div>© <span id="year"></span> <span class="accent">Nasir Shahzad Yasin</span> — Senior QA Automation Engineer</div>
+      <div style="margin-top:8px; font-size:13px;">
+        Built as a single-file site. Deploy easily on GitHub Pages.
+      </div>
+    </div>
+  </div>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
