@@ -38,6 +38,58 @@
     .nav{display:flex; gap:14px; flex-wrap:wrap; justify-content:flex-end}
     .nav a{opacity:.86; font-size:14px; padding:8px 10px; border-radius:999px; border:1px solid transparent}
     .nav a:hover{opacity:1; border-color:var(--line); background:rgba(255,255,255,.03)}
+    .menuBtn{
+      display:none;
+      width:44px;
+      height:44px;
+      align-items:center;
+      justify-content:center;
+      border-radius:999px;
+      border:1px solid var(--line);
+      background:rgba(255,255,255,.03);
+      color:var(--text);
+      cursor:pointer;
+    }
+    .menuBtn:hover{border-color:rgba(124,92,255,.35); box-shadow: 0 12px 30px rgba(124,92,255,.15)}
+    .menuBtn:focus-visible{outline:2px solid rgba(124,92,255,.6); outline-offset:2px}
+    .menuIcon,
+    .menuIcon::before,
+    .menuIcon::after{
+      width:18px;
+      height:2px;
+      border-radius:2px;
+      background:currentColor;
+      display:block;
+      transition:transform .2s ease, opacity .2s ease;
+      content:"";
+    }
+    .menuIcon{position:relative}
+    .menuIcon::before{position:absolute; top:-6px; left:0}
+    .menuIcon::after{position:absolute; top:6px; left:0}
+    .menuBtn[aria-expanded="true"] .menuIcon{background:transparent}
+    .menuBtn[aria-expanded="true"] .menuIcon::before{transform:translateY(6px) rotate(45deg)}
+    .menuBtn[aria-expanded="true"] .menuIcon::after{transform:translateY(-6px) rotate(-45deg)}
+    .mobileNav{
+      display:none;
+      margin-top:10px;
+      padding:10px;
+      border:1px solid var(--line);
+      border-radius:18px;
+      background:rgba(15,22,36,.55);
+      backdrop-filter: blur(10px);
+      position:sticky;
+      top:76px;
+      z-index:49;
+    }
+    .mobileNav.open{display:grid; gap:6px}
+    .mobileNav a{
+      padding:10px 12px;
+      border-radius:12px;
+      border:1px solid transparent;
+      opacity:.9;
+      font-size:14px;
+    }
+    .mobileNav a:hover{opacity:1; border-color:var(--line); background:rgba(255,255,255,.03)}
     .btn{
       display:inline-flex; align-items:center; gap:10px;
       padding:10px 14px; border-radius:999px; border:1px solid var(--line);
@@ -51,6 +103,11 @@
     .btn.small{padding:8px 10px; font-size:13px}
     header.hero{padding:42px 0 18px; display:grid; grid-template-columns: 1.4fr .6fr; gap:18px; align-items:stretch}
     @media (max-width: 880px){ header.hero{grid-template-columns:1fr} }
+    @media (max-width: 840px){
+      .nav{display:none}
+      .menuBtn{display:inline-flex}
+      .topbar{border-radius:22px}
+    }
     .card{
       background:rgba(15,22,36,.65);
       border:1px solid var(--line);
@@ -114,7 +171,26 @@
         <a href="#education">Education</a>
         <a href="#contact">Contact</a>
       </nav>
+      <button
+        class="menuBtn"
+        id="menuBtn"
+        type="button"
+        aria-expanded="false"
+        aria-controls="mobileNav"
+        aria-label="Open menu"
+      >
+        <span class="menuIcon" aria-hidden="true"></span>
+      </button>
     </div>
+
+    <nav id="mobileNav" class="mobileNav" aria-label="Mobile">
+      <a href="#about">About</a>
+      <a href="#expertise">Expertise</a>
+      <a href="#projects">Case Studies</a>
+      <a href="#experience">Experience</a>
+      <a href="#education">Education</a>
+      <a href="#contact">Contact</a>
+    </nav>
 
     <header class="hero">
       <div class="card heroMain">
@@ -406,6 +482,30 @@
 
   <script>
     document.getElementById("year").textContent = new Date().getFullYear();
+
+    const menuBtn = document.getElementById("menuBtn");
+    const mobileNav = document.getElementById("mobileNav");
+
+    const setMenuState = (isOpen) => {
+      menuBtn.setAttribute("aria-expanded", String(isOpen));
+      menuBtn.setAttribute("aria-label", isOpen ? "Close menu" : "Open menu");
+      mobileNav.classList.toggle("open", isOpen);
+    };
+
+    menuBtn.addEventListener("click", () => {
+      const isOpen = menuBtn.getAttribute("aria-expanded") === "true";
+      setMenuState(!isOpen);
+    });
+
+    mobileNav.querySelectorAll("a").forEach((link) => {
+      link.addEventListener("click", () => setMenuState(false));
+    });
+
+    window.addEventListener("resize", () => {
+      if (window.innerWidth > 840) {
+        setMenuState(false);
+      }
+    });
   </script>
 </body>
 </html>
