@@ -44,9 +44,11 @@
       background:rgba(255,255,255,.03);
       transition:.18s ease;
       font-weight:600; font-size:14px;
+      cursor:pointer;
     }
     .btn:hover{transform:translateY(-1px); border-color:rgba(124,92,255,.35); box-shadow: 0 12px 30px rgba(124,92,255,.15)}
     .btn.primary{border-color:rgba(124,92,255,.35); background:linear-gradient(135deg, rgba(124,92,255,.22), rgba(34,197,94,.12))}
+    .btn.small{padding:8px 10px; font-size:13px}
     header.hero{padding:42px 0 18px; display:grid; grid-template-columns: 1.4fr .6fr; gap:18px; align-items:stretch}
     @media (max-width: 880px){ header.hero{grid-template-columns:1fr} }
     .card{
@@ -125,8 +127,10 @@
         </p>
 
         <div class="heroCtas">
-          <!-- Replace # with your real links if you want -->
-          <a class="btn primary" href="#contact">Hire / Collaborate</a>
+          <!-- ✅ Add your CV file in the repo and name it exactly: Nasir_Shahzad_Yasin_CV.pdf -->
+          <a class="btn primary" href="Nasir_Shahzad_Yasin_CV.pdf" download>Download CV</a>
+
+          <a class="btn" href="#contact">Hire / Collaborate</a>
           <a class="btn" href="https://linkedin.com/in/nasir-wattoo" target="_blank" rel="noreferrer">LinkedIn</a>
           <a class="btn" href="https://github.com/nasirsyasin" target="_blank" rel="noreferrer">GitHub</a>
           <a class="btn" href="mailto:nasirsyasin@gmail.com">Email</a>
@@ -331,8 +335,8 @@
             </div>
             <p><span class="accent">Machine Learning:</span> Applied Autoencoder and CNN models for medical image classification.</p>
             <p style="margin-top:8px;">
-              Publication: <a class="btn" style="padding:8px 10px;" href="https://ieeexplore.ieee.org/document/9996048" target="_blank" rel="noreferrer">IEEE Paper</a>
-              <a class="btn" style="padding:8px 10px;" href="https://riphah.edu.pk/" target="_blank" rel="noreferrer">University</a>
+              <a class="btn small" href="https://ieeexplore.ieee.org/document/9996048" target="_blank" rel="noreferrer">IEEE Paper</a>
+              <a class="btn small" href="https://riphah.edu.pk/" target="_blank" rel="noreferrer">University</a>
             </p>
           </div>
         </div>
@@ -341,18 +345,27 @@
       <div>
         <div class="sectionHead">
           <h2>Certifications</h2>
-          <p>Quick proof of skills.</p>
+          <p>Verification links included.</p>
         </div>
         <div class="card content">
           <div class="list">
             <div class="li">
               <div class="title"><b>API Testing with Postman</b><small>Coursera</small></div>
+              <p>
+                <a class="btn small" href="https://coursera.org/verify/XRX9MJYKPX2G" target="_blank" rel="noreferrer">Verify Certificate</a>
+              </p>
             </div>
             <div class="li">
-              <div class="title"><b>Selenium Automation with Java</b><small>Coursera</small></div>
+              <div class="title"><b>Automation Script Using Selenium and Java</b><small>Coursera</small></div>
+              <p>
+                <a class="btn small" href="https://coursera.org/verify/WYGCT7YUE8BW" target="_blank" rel="noreferrer">Verify Certificate</a>
+              </p>
             </div>
             <div class="li">
-              <div class="title"><b>Developing Cloud Apps with Node.js & React</b><small>IBM (Coursera)</small></div>
+              <div class="title"><b>Developing Cloud Apps with Node.js & React (IBM)</b><small>Coursera</small></div>
+              <p>
+                <a class="btn small" href="https://coursera.org/verify/MQVNXA8DJHTW" target="_blank" rel="noreferrer">Verify Certificate</a>
+              </p>
             </div>
           </div>
         </div>
@@ -389,7 +402,7 @@
     <div class="footer">
       <div>© <span id="year"></span> <span class="accent">Nasir Shahzad Yasin</span> — Senior QA Automation Engineer</div>
       <div style="margin-top:8px; font-size:13px;">
-        Built as a single-file site. Deploy easily on GitHub Pages.
+        Tip: upload your CV PDF into the same repo as <span class="mono">Nasir_Shahzad_Yasin_CV.pdf</span> so the Download button works.
       </div>
     </div>
   </div>
